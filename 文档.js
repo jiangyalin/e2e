@@ -25,3 +25,6 @@
 
 // 等待
 // await driver.sleep(5000)
+
+// 关房文档
+// https://www.selenium.dev/selenium/docs/api/javascript/index.html

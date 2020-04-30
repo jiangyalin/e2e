@@ -14,10 +14,8 @@ async function example() {
     await driver.sleep(1000)
     await driver.findElement(By.css('#app .reportBarrier button.ivu-btn.ivu-btn-primary')).click()
 
-    console.log('正常结束')
     // driver.quit()
   } finally {
-    console.log('异常结束')
     // driver.quit()
   }
 }

@@ -3,7 +3,7 @@ const chrome = require('selenium-webdriver/chrome')
 const path = require('chromedriver').path // 必要，不能删除
 
 async function example() {
-  const driver = new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options()).build()
+  const driver = new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().detachDriver(true)).build()
   try {
     await driver.get('http://192.168.1.97:6024/hzc_pc')
     await driver.findElement(By.css('#app [placeholder="请输入用户名"]')).sendKeys('adminWeb')
@@ -16,7 +16,7 @@ async function example() {
 
     // driver.quit()
   } finally {
-    // driver.quit()
+    driver.quit()
   }
 }
 
